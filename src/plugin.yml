@@ -1,0 +1,24 @@
+name: ksensial
+version: 1.0
+main: ksensial.Main
+description: plugin
+
+commands:
+  fly:
+    description: fly command
+  spawn:
+    aliases: [tmvhs]
+    description: spawn command
+  vanish:
+    aliases: [ev]
+    description: vanish command
+  call:
+    description: call command
+  wd:
+    description: world command
+  wd warp:
+    description: warp world to world
+  wd difficulty:
+    description: set world difficulty
+  wd create:
+    description: create world
