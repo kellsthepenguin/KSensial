@@ -11,5 +11,6 @@ public class Main extends JavaPlugin {
         getCommand("fly").setExecutor(new FlyCommand());
         getCommand("spawn").setExecutor(new SpawnCommand());
         getCommand("vanish").setExecutor(new VanishCommand());
+        getCommand("wd").setExecutor(new WorldCommand());
     }
 }
