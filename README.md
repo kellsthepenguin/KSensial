@@ -1,1 +1,1 @@
-# KSensial
+# KSentials
