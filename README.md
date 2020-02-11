@@ -1,2 +1,2 @@
 # KSensials
-**this is not essentials.**
+This is not Essentials. This is KSensial.
