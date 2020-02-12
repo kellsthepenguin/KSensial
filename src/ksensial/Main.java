@@ -12,5 +12,6 @@ public class Main extends JavaPlugin {
         getCommand("spawn").setExecutor(new SpawnCommand());
         getCommand("vanish").setExecutor(new VanishCommand());
         getCommand("wd").setExecutor(new WorldCommand());
+        getCommand("customitem").setExecutor(new CustomItemCommand());
     }
 }
