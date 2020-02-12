@@ -22,3 +22,6 @@ commands:
     description: set world difficulty
   wd create:
     description: create world
+  customitem:
+    description: custom item
+  
