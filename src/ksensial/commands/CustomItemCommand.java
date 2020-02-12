@@ -51,7 +51,7 @@ public class CustomItemCommand implements CommandExecutor {
                                 p.sendMessage("§c올바른 사용법: /customitem name <변경할 이름>");
                             }
                         } else {
-                            p.sendMessage("§c인챈트할 아이템을 손에 들어야 합니다");
+                            p.sendMessage("§c이름을 바꿀 아이템을 손에 들어야 합니다");
                         }
                         break;
                     }
@@ -67,7 +67,7 @@ public class CustomItemCommand implements CommandExecutor {
                                 p.sendMessage("§c올바른 사용법: /customitem description <변경할 설명>");
                             }
                         } else {
-                            p.sendMessage("§c인챈트할 아이템을 손에 들어야 합니다");
+                            p.sendMessage("§c설명을 변경할 아이템을 손에 들어야 합니다");
                         }
                         break;
                     }
