@@ -13,5 +13,6 @@ public class Main extends JavaPlugin {
         getCommand("vanish").setExecutor(new VanishCommand());
         getCommand("wd").setExecutor(new WorldCommand());
         getCommand("customitem").setExecutor(new CustomItemCommand());
+        getCommand("feed").setExecutor(new FeedCommand());
     }
 }
