@@ -13,7 +13,7 @@ public class SpawnCommand implements CommandExecutor {
         } else {
             Player p = (Player) sender;
             p.teleport(Bukkit.getWorld("world").getSpawnLocation());
-            p.sendMessage("��e�ڷ���Ʈ �Ϸ�!");
+            p.sendMessage("스폰으로 이동시켜드렸습니다!");
         }
         return true;
     }
