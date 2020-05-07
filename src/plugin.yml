@@ -12,8 +12,6 @@ commands:
   vanish:
     aliases: [ev]
     description: vanish command
-  call:
-    description: call command
   wd:
     description: world command
   wd warp:
