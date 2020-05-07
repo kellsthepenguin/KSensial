@@ -14,7 +14,7 @@ public class WorldCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender.hasPermission("penguinPlugin.wd")) {
             if (args.length < 1) {
-                sender.sendMessage("¡×c¿Ã¹Ù¸¥ »ç¿ë¹ı: /wd create <¿ùµå ÀÌ¸§> <World type(normal, FLAT, LARGEBIOMES, AMPLIFIED>, /wd warp <¿ùµå ÀÌ¸§>, /wd diffculty <¿ùµå> <³­ÀÌµµ(0 = PEACEFUL, 1 = EASY, 2 = NORMAL, 3 = HARD)>");
+                sender.sendMessage("Â§cì˜¬ë°”ë¥¸ ì‚¬ìš©ë²•: /wd create <ì›”ë“œ ì´ë¦„> <World type(normal, FLAT, LARGEBIOMES, AMPLIFIED>, /wd warp <ì›”ë“œ ì´ë¦„>, /wd diffculty <ì›”ë“œ> <ë‚œì´ë„(0 = PEACEFUL, 1 = EASY, 2 = NORMAL, 3 = HARD)>");
             } else {
                 switch (args[0]) {
                     case "create": {
@@ -38,11 +38,11 @@ public class WorldCommand implements CommandExecutor {
                                     wdc.createWorld();
                                     break;
                                 default:
-                                    sender.sendMessage("¡×c¿Ã¹Ù¸¥ »ç¿ë¹ı: /wd create <¿ùµå ÀÌ¸§> <¿ùµå Å¸ÀÔ(NORMAL, FLAT, largebiomes, amplified>");
+                                    sender.sendMessage("Â§cì˜¬ë°”ë¥¸ ì‚¬ìš©ë²•: /wd create <ì›”ë“œ ì´ë¦„> <ì›”ë“œ íƒ€ì…(NORMAL, FLAT, largebiomes, amplified>");
                                     break;
                             }
                         } else {
-                            sender.sendMessage("¡×c¿Ã¹Ù¸¥ »ç¿ë¹ı: /wd create <¿ùµå ÀÌ¸§> <¿ùµå Å¸ÀÔ(normal, flat, largebiomes, amplified>");
+                            sender.sendMessage("Â§cì˜¬ë°”ë¥¸ ì‚¬ìš©ë²•: /wd create <ì›”ë“œ ì´ë¦„> <ì›”ë“œ íƒ€ì…(normal, flat, largebiomes, amplified>");
                         }
                         break;
                     }
@@ -53,11 +53,11 @@ public class WorldCommand implements CommandExecutor {
                             } else {
                                 Player p = (Player) sender;
 
-                                if (!(Bukkit.getWorld(args[1]) == null)) {
+                                if (Bukkit.getWorld(args[1]) != null) {
                                     p.teleport(Bukkit.getWorld(args[1]).getSpawnLocation());
-                                    p.sendMessage("¡×cSuccessfully Teleported!");
+                                    p.sendMessage("Â§cSuccessfully Teleported!");
                                 } else {
-                                    p.sendMessage("¡×c¿Ã¹Ù¸¥ ¿ùµå°¡ ¾Æ´Õ´Ï´Ù");
+                                    p.sendMessage("Â§cì˜¬ë°”ë¥¸ ì›”ë“œê°€ ì•„ë‹™ë‹ˆë‹¤");
                                 }
                             }
                             break;
@@ -65,33 +65,33 @@ public class WorldCommand implements CommandExecutor {
                     }
                     case "difficulty": {
                         if (args.length == 3) {
-                            if (!(Bukkit.getWorld(args[1]) == null)) {
+                            if (Bukkit.getWorld(args[1]) != null) {
                                 switch (args[2]) {
                                     case "0":
                                         Bukkit.getWorld("" + args[1]).setDifficulty(Difficulty.PEACEFUL);
-                                        sender.sendMessage("¡×e¼º°øÀûÀ¸·Î ³­ÀÌµµ¸¦ ¹Ù²å½À´Ï´Ù.");
+                                        sender.sendMessage("Â§eì„±ê³µì ìœ¼ë¡œ ë‚œì´ë„ë¥¼ ë°”ê¿¨ìŠµë‹ˆë‹¤.");
                                         break;
                                     case "1":
                                         Bukkit.getWorld("" + args[1]).setDifficulty(Difficulty.EASY);
-                                        sender.sendMessage("¡×e¼º°øÀûÀ¸·Î ³­ÀÌµµ¸¦ ¹Ù²å½À´Ï´Ù.");
+                                        sender.sendMessage("Â§eì„±ê³µì ìœ¼ë¡œ ë‚œì´ë„ë¥¼ ë°”ê¿¨ìŠµë‹ˆë‹¤.");
                                         break;
                                     case "2":
                                         Bukkit.getWorld("" + args[1]).setDifficulty(Difficulty.NORMAL);
-                                        sender.sendMessage("¡×e¼º°øÀûÀ¸·Î ³­ÀÌµµ¸¦ ¹Ù²å½À´Ï´Ù.");
+                                        sender.sendMessage("Â§eì„±ê³µì ìœ¼ë¡œ ë‚œì´ë„ë¥¼ ë°”ê¿¨ìŠµë‹ˆë‹¤.");
                                         break;
                                     case "3":
                                         Bukkit.getWorld("" + args[1]).setDifficulty(Difficulty.HARD);
-                                        sender.sendMessage("¡×e¼º°øÀûÀ¸·Î ³­ÀÌµµ¸¦ ¹Ù²å½À´Ï´Ù.");
+                                        sender.sendMessage("Â§eì„±ê³µì ìœ¼ë¡œ ë‚œì´ë„ë¥¼ ë°”ê¿¨ìŠµë‹ˆë‹¤.");
                                         break;
                                     default:
-                                        sender.sendMessage("¡×c¿Ã¹Ù¸¥ »ç¿ë¹ı: /wd diffculty <¿ùµå> <³­ÀÌµµ(0 = PEACEFUL, 1 = EASY, 2 = NORMAL, 3 = HARD)>");
+                                        sender.sendMessage("Â§cì˜¬ë°”ë¥¸ ì‚¬ìš©ë²•: /wd diffculty <ì›”ë“œ> <ë‚œì´ë„(0 = PEACEFUL, 1 = EASY, 2 = NORMAL, 3 = HARD)>");
                                         break;
                                 }
                             } else {
-                                sender.sendMessage("¡×c¿Ã¹Ù¸¥ ¿ùµå°¡ ¾Æ´Õ´Ï´Ù");
+                                sender.sendMessage("Â§cì˜¬ë°”ë¥¸ ì›”ë“œê°€ ì•„ë‹™ë‹ˆë‹¤");
                             }
                         } else {
-                            sender.sendMessage("¡×c¿Ã¹Ù¸¥ ¿ùµå°¡ ¾Æ´Õ´Ï´Ù");
+                            sender.sendMessage("Â§cì˜¬ë°”ë¥¸ ì›”ë“œê°€ ì•„ë‹™ë‹ˆë‹¤");
                         }
                     }
                 }
