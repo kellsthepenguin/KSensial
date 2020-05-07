@@ -26,7 +26,7 @@ public class CustomItemCommand implements CommandExecutor {
                             if (Enchantment.getByName(args[1]) == null) {
                                 p.sendMessage("§c올바른 사용법: /customitem <바꿀거(name/description/enchant> <인챈트 레벨>");
                             } else {
-                                if (!(p.getInventory().getItemInMainHand() == null)) {
+                                if (p.getInventory().getItemInMainHand() != null) {
                                     if (args.length == 3) {
                                         try {
                                             p.getInventory().getItemInMainHand().addEnchantment(Enchantment.getByName(args[1]), NumberUtils.toInt(args[2]));
@@ -43,7 +43,7 @@ public class CustomItemCommand implements CommandExecutor {
                             break;
                         }
                         case "name": {
-                            if (!(p.getInventory().getItemInMainHand() == null)) {
+                            if (p.getInventory().getItemInMainHand() != null) {
                                 ItemMeta im = p.getInventory().getItemInMainHand().getItemMeta();
                                 if (args.length == 2) {
                                     im.setDisplayName(args[1]);
