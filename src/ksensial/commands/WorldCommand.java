@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 public class WorldCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (sender.hasPermission("penguinPlugin.wd")) {
+        if (sender.hasPermission("ksensial.wd")) {
             if (args.length < 1) {
                 sender.sendMessage("§c올바른 사용법: /wd create <월드 이름> <World type(normal, FLAT, LARGEBIOMES, AMPLIFIED>, /wd warp <월드 이름>, /wd diffculty <월드> <난이도(0 = PEACEFUL, 1 = EASY, 2 = NORMAL, 3 = HARD)>");
             } else {
